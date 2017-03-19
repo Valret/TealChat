@@ -7,16 +7,13 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 
-/**
- * Created by Grob on 3/11/17.
- */
-public class Client {
-    Socket         server;
-    PrintWriter    out;
-    BufferedReader consoleIn,
+class Client {
+    private Socket         server;
+    private PrintWriter    out;
+    private BufferedReader consoleIn,
                    in;
 
-    public Client() throws IOException {
+    Client() throws IOException {
         try {
             String ip = "127.0.0.1";
             consoleIn = new BufferedReader(

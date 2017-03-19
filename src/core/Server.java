@@ -11,10 +11,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- * Created by Grob on 3/11/17.
- */
-public class Server {
+class Server {
 
     private List<User> users = Collections.synchronizedList(new ArrayList<User>());
 
@@ -36,14 +33,14 @@ public class Server {
     private void closeAll() {
     }
 
-    public class User implements Runnable {
+    private class User implements Runnable {
 
         private BufferedReader in;
         private PrintWriter out;
         private Socket connection;
         private String name;
 
-        public User(Socket connection) {
+        User(Socket connection) {
             this.connection = connection;
         }
         

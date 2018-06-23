@@ -1,2 +1,2 @@
 # Teal Chat
-don't let warwar type 'exit'
+simple chat made to test how TCP works in java
